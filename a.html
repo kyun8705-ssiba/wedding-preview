@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한기헌 ♥ 박솔 결혼합니다 · 시안 A</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+  :root{--outer:#E7DED2;--bg:#F8F2EA;--card:#FFFDF9;--ink:#3A2E26;--sub:#8B7664;--accent:#B48A55;--line:#E6D8C6;
+        --font:'Noto Serif KR',serif;--display:'Cormorant Garamond',serif;--sun:#B5654F}
+  .cg{font-family:'Cormorant Garamond',serif}
+  .label{font-style:italic;letter-spacing:.3em;font-size:15px}
+
+  /* 인트로 */
+  #intro{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:#1D140E;transition:opacity 1.1s ease,transform 1.1s ease}
+  #intro::before{content:"";position:absolute;inset:0;background:url(photo.jpg) 50% 20%/cover;opacity:.45;animation:kb 4s ease-out both}
+  #intro.out{opacity:0;transform:scale(1.06);pointer-events:none}
+  #intro .t{position:relative;text-align:center;color:#FFF3E2}
+  #intro .t p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:40px;font-weight:300}
+  #intro .t small{display:block;margin-top:14px;font-size:12px;letter-spacing:.5em;opacity:0;animation:fi 1s 1.4s forwards}
+  @keyframes kb{from{transform:scale(1.25)}to{transform:scale(1.05)}}
+  @keyframes fi{to{opacity:.8}}
+  #intro .split span{animation:up .9s forwards;opacity:0;transform:translateY(.5em)}
+  @keyframes up{to{opacity:1;transform:none}}
+
+  /* 히어로 */
+  .hero{height:100svh;min-height:640px;max-height:900px;padding:0;overflow:hidden;color:#FFF7EC}
+  .hero .ph{position:absolute;inset:-6% 0 0;background:url(photo.jpg) 50% 42%/cover;animation:kb2 9s ease-out both}
+  @keyframes kb2{from{scale:1.18}to{scale:1}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,20,8,.45),rgba(0,0,0,0) 32%,rgba(0,0,0,0) 55%,rgba(24,13,6,.6) 80%,rgba(24,13,6,.88))}
+  .hero .bot{color:#FFF6EA!important} .hero .bot .w{color:rgba(255,246,234,.8)!important} .hero .bot .nm i{color:#E9C48D!important}
+  .hero .top{position:absolute;z-index:2;top:64px;left:0;right:0}
+  .hero .top .d{font-family:'Cormorant Garamond',serif;letter-spacing:.45em;font-size:14px}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:58px;line-height:1;margin-top:16px;text-shadow:0 4px 30px rgba(0,0,0,.25)}
+  .hero .bot{position:absolute;z-index:2;bottom:40px;left:0;right:0;color:var(--ink)}
+  .hero .nm{font-size:22px;letter-spacing:.2em;font-weight:500}
+  .hero .nm i{font-family:'Cormorant Garamond',serif;color:var(--accent);margin:0 12px}
+  .hero .w{font-size:13px;color:var(--sub);margin-top:10px;line-height:1.8}
+  .scroll{margin:18px auto 0;width:1px;height:38px;background:linear-gradient(var(--accent),transparent);animation:sc 2s infinite}
+  @keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  .poem{font-size:15px;line-height:2.25;font-weight:300}
+  .line{width:1px;height:56px;background:var(--accent);margin:44px auto;opacity:.5}
+  .fam{font-size:15px;line-height:2.2}
+  .fam small{color:var(--sub);font-size:13px;margin:0 6px}
+  .pill{margin-top:30px;padding:12px 30px;border:1px solid var(--accent);color:var(--accent);font-size:13px;letter-spacing:.1em;transition:all .3s}
+  .pill:hover{background:var(--accent);color:#fff}
+
+  /* 사진 띠 */
+  .band{height:520px;padding:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .band .bg{position:absolute;inset:-25% 0;background:url(photo.jpg) 55% 10%/cover}
+  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(60,30,10,.15) 25%,rgba(60,30,10,.15) 75%,var(--bg))}
+  .band p{position:relative;z-index:2;color:#FFF6EA;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;line-height:1.35;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+  .band p small{display:block;font-family:'Noto Serif KR',serif;font-style:normal;font-size:13px;margin-top:16px;letter-spacing:.1em;opacity:.9}
+
+  .cal{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+  .cal .grid{font-family:'Cormorant Garamond',serif;font-size:17px}
+  .dd{display:flex;justify-content:center;gap:6px;margin-top:34px}
+  #dday div{width:66px}
+  #dday b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;color:var(--ink)}
+  #dday span{display:block;font-size:10px;letter-spacing:.25em;color:var(--sub)}
+  .dmsg{margin-top:20px;font-size:14px;color:var(--sub)} .dmsg b{color:var(--accent)}
+
+  .gal{padding-left:14px;padding-right:14px}
+  .g-grid .g-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+
+  .info{display:grid;gap:12px;text-align:left}
+  .info div{background:var(--card);border:1px solid var(--line);padding:22px 22px}
+  .info b{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent);font-size:17px;margin-bottom:6px}
+  .info p{font-size:14px;line-height:1.85;font-weight:300}
+
+  .cta{background:#EFE4D5}
+  .cta .go{margin-top:24px;padding:15px 40px;background:var(--accent);color:#fff;font-size:14px;letter-spacing:.08em}
+
+  .end{height:600px;padding:0;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:60px;color:#FFF6EA;overflow:hidden}
+  .end .bg{position:absolute;inset:0;background:url(photo.jpg) 50% 20%/cover}
+  .end::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--bg),rgba(30,15,5,0) 30%,rgba(30,15,5,.65))}
+  .end>*:not(.bg){position:relative;z-index:2}
+  .end h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:44px}
+  .end p{font-size:13px;line-height:1.9;margin-top:8px;opacity:.9}
+  .end .share button{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);color:#fff;backdrop-filter:blur(6px)}
+</style>
+</head>
+<body data-petal="gold">
+<div id="intro" data-time="3000"><div class="t"><p class="split">Golden Hour</p><small>2027 · 04 · 24</small></div></div>
+<div id="progress"></div>
+<button id="bgm-btn" aria-label="배경음악">♪</button>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="ph" data-px=".25"></div>
+    <div class="top"><div class="d">2027 · 04 · 24 · SAT</div><h1>Golden<br>Hour Vow</h1></div>
+    <div class="bot">
+      <div class="nm">한기헌<i>&amp;</i>박솔</div>
+      <div class="w">2027년 4월 24일 토요일 오후 1시 10분<br>웨스턴팰리스웨딩 7층 웨스턴홀</div>
+      <div class="scroll"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">Invitation</div>
+    <div class="title" data-r="up">소중한 분들을 초대합니다</div>
+    <p class="poem" data-r="blur">노을이 바다 위로 내려앉던 저녁,<br>
+    서로의 하루가 되어 주기로 약속했습니다.<br><br>
+    꽃이 한창인 봄날,<br>
+    두 사람이 같은 길로 첫걸음을 내딛습니다.<br>
+    따뜻한 마음으로 함께해 주시면<br>
+    더없는 기쁨으로 간직하겠습니다.</p>
+    <div class="line" data-r="zoom"></div>
+    <div class="fam stagger">
+      <div>한형열 · 이영이<small>의 장남</small><b>기헌</b></div>
+      <div>박상필 · 최미애<small>의 장녀</small><b>솔</b></div>
+    </div>
+    <button class="pill" data-open="m-contact" data-r="up">연락하기</button>
+  </section>
+
+  <section class="band">
+    <div class="bg" data-px="-.12"></div>
+    <p data-r="blur">Two hearts,<br>one horizon<small>같은 노을을 바라보는 두 사람</small></p>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">Wedding Day</div>
+    <div class="title" data-r="up">2027. 4. 24 토요일 오후 1시 10분</div>
+    <div class="cal" data-r="zoom"><div class="grid" id="cal" data-head="S,M,T,W,T,F,S"></div></div>
+    <div class="dd" id="dday" data-labels="DAYS,HOUR,MIN,SEC" data-r="up"></div>
+    <div class="dmsg" data-r="up">기헌 ♥ 솔의 결혼식이 <b class="dnum"></b>일 남았습니다</div>
+  </section>
+
+  <section class="gal" id="gallery-sec">
+    <div class="label" data-r="up">Gallery</div>
+    <div class="title" data-r="up">우리의 순간들</div>
+    <div class="g-grid" id="gallery" data-show="9" data-r="up"></div>
+    <button class="g-more" id="g-more"><span>더보기</span> ↓</button>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">Location</div>
+    <div class="title" data-r="up" style="margin-bottom:10px">웨스턴팰리스웨딩</div>
+    <p style="font-size:14px;color:var(--sub);line-height:1.8" data-r="up">인천광역시 부평구 부평대로 278번길 16<br>7층 웨스턴홀</p>
+    <div class="map" data-r="zoom"><i class="pin"></i><span>지도 자리 (네이버 지도 연동 시 표시)</span></div>
+    <div class="nav" data-r="up">
+      <a href="https://map.naver.com/p/search/웨스턴팰리스웨딩" target="_blank">네이버지도</a>
+      <a href="https://map.kakao.com/link/search/웨스턴팰리스웨딩" target="_blank">카카오맵</a>
+      <button data-copy="인천광역시 부평구 부평대로 278번길 16" data-msg="주소가 복사되었습니다">주소 복사</button>
+    </div>
+    <div class="way stagger">
+      <div><b>지하철</b>○호선 ○○역 ○번 출구 도보 ○분</div>
+      <div><b>버스</b>○○정류장 하차 (간선 ○○○ / 지선 ○○○)</div>
+      <div><b>자가용 · 주차</b>내비게이션 '웨스턴팰리스웨딩' 검색 · 건물 주차장 ○시간 무료</div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="label" data-r="up">Information</div>
+    <div class="title" data-r="up">안내사항</div>
+    <div class="info stagger">
+      <div><b>Reception</b><p>식사는 예식 후 ○층 연회장에서 뷔페로 준비되어 있습니다.</p></div>
+      <div><b>Photo Booth</b><p>포토부스에서 환한 미소와 축하 한마디를 남겨 주세요.</p></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="label" data-r="up">R.S.V.P.</div>
+    <div class="title" data-r="up" style="margin-bottom:12px">참석 의사 전달</div>
+    <p style="font-size:14px;color:var(--sub);line-height:1.9" data-r="up">모든 분을 소중히 모실 수 있도록<br>참석 여부를 미리 알려 주세요.</p>
+    <button class="go" data-open="m-rsvp" data-r="zoom">참석 의사 전달하기</button>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">With Heart</div>
+    <div class="title" data-r="up" style="margin-bottom:12px">마음 전하실 곳</div>
+    <p style="font-size:14px;color:var(--sub);line-height:1.9;margin-bottom:22px" data-r="up">참석이 어려우신 분들을 위해 기재했습니다.<br>너그러운 마음으로 양해 부탁드립니다.</p>
+    <div class="acc" data-r="up"><button class="acc-h">신랑측 계좌번호</button><div class="acc-b">
+      <div class="acc-row"><span><small>신랑 한기헌</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>아버지 한형열</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>어머니 이영이</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div></div></div>
+    <div class="acc" data-r="up"><button class="acc-h">신부측 계좌번호</button><div class="acc-b">
+      <div class="acc-row"><span><small>신부 박솔</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>아버지 박상필</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>어머니 최미애</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div></div></div>
+  </section>
+
+  <section class="end">
+    <div class="bg" data-px="-.08" data-scale="1.15"></div>
+    <h3 data-r="blur">Thank you</h3>
+    <p data-r="up">저희의 봄날을 함께 축복해 주셔서<br>진심으로 감사합니다.</p>
+    <div class="share" data-r="up"><button data-copy="" data-msg="링크가 복사되었습니다">링크 복사</button></div>
+  </section>
+</div>
+
+<div class="modal" id="m-contact"><div class="m-box"><button class="m-x">✕</button><h4>연락하기</h4><p class="s">축하 인사를 전해 주세요</p>
+  <div class="c-row"><span><small>신랑</small>한기헌</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신부</small>박솔</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신랑 혼주</small>한형열 · 이영이</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신부 혼주</small>박상필 · 최미애</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+</div></div>
+<div class="modal" id="m-rsvp"><div class="m-box"><button class="m-x">✕</button><h4>참석 의사 전달</h4><p class="s">2027. 4. 24 (토) 오후 1:10</p>
+  <form class="rsvp">
+    <div class="seg"><label><input type="radio" name="side" checked><span>신랑측</span></label><label><input type="radio" name="side"><span>신부측</span></label></div>
+    <div class="seg"><label><input type="radio" name="go" checked><span>참석</span></label><label><input type="radio" name="go"><span>불참</span></label></div>
+    <input type="text" placeholder="성함"><input type="number" placeholder="동행 인원 (본인 제외)">
+    <button class="go">전달하기</button>
+  </form>
+</div></div>
+<script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한기헌 ♥ 박솔 결혼합니다 · 시안 D</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="common.css">
+<style>
+  /* 인트로 */
+  #intro{position:fixed;inset:0;z-index:200;background:var(--intro-bg);color:var(--intro-ink);display:flex;align-items:center;justify-content:center;transition:transform 1s cubic-bezier(.75,0,.2,1)}
+  #intro.out{transform:translateY(-100%)}
+  #intro .t{text-align:center}
+  #intro b{display:block;font-family:var(--display);font-weight:var(--intro-w,300);font-size:50px;letter-spacing:.06em;animation:iu 1s both}
+  #intro i{display:block;height:1px;width:0;background:currentColor;margin:20px auto;opacity:.5;animation:ig 1.2s .3s forwards}
+  #intro small{font-size:11px;letter-spacing:.5em;opacity:0;animation:iu 1s .7s forwards}
+  @keyframes iu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes ig{to{width:120px}}
+  /* 첫 화면 등장 */
+  [data-in]{opacity:0;transform:translateY(30px);transition:opacity 1.2s ease,transform 1.4s cubic-bezier(.2,.8,.2,1)}
+  body.ready [data-in]{opacity:1;transform:none}
+  body.settled [data-in]{transition:none!important}
+  /* 공통 본문 */
+  .poem{font-size:15px;line-height:2.2;font-weight:300}
+  .rule{width:28px;height:1px;background:var(--ink);margin:40px auto;opacity:.5}
+  .fam{font-size:15px;line-height:2.2}
+  .fam small{color:var(--sub);font-size:13px;margin:0 6px}
+  .pill{margin-top:30px;padding:12px 30px;border:1px solid var(--line);font-size:13px;letter-spacing:.08em;border-radius:var(--radius,0);background:var(--card);transition:all .3s}
+  .pill:hover{border-color:var(--ink)}
+  .calbox{padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .dd{display:flex;justify-content:center;gap:6px;margin-top:32px}
+  #dday div{width:66px}
+  #dday b{font-family:var(--display);font-weight:var(--num-w,300);font-size:34px}
+  #dday span{display:block;font-size:10px;letter-spacing:.25em;color:var(--sub);margin-top:2px}
+  .dmsg{margin-top:20px;font-size:14px;color:var(--sub)} .dmsg b{color:var(--ink);font-weight:600}
+  .desc{font-size:14px;color:var(--sub);line-height:1.9}
+  .info{display:grid;gap:10px;text-align:left}
+  .info div{background:var(--card);border:1px solid var(--line);padding:20px 22px;border-radius:var(--radius,0)}
+  .info b{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+  .info p{font-size:14px;line-height:1.8;color:var(--sub)}
+  .cta .go{margin-top:24px;padding:15px 40px;background:var(--accent);color:#fff;font-size:14px;letter-spacing:.06em;border-radius:var(--radius,0)}
+  .end h3{font-family:var(--display);font-weight:var(--intro-w,300)}
+
+  :root{--outer:#ECECEC;--bg:#FFFFFF;--card:#FAFAFA;--ink:#141414;--sub:#8C8C8C;--accent:#141414;--line:#EAEAEA;
+        --font:'Pretendard',sans-serif;--display:'Pretendard',sans-serif;--intro-bg:#fff;--intro-ink:#141414;--intro-w:200;--num-w:200;--sun:#C25B4E}
+  #bgm-btn{background:rgba(20,20,20,.06);border-color:rgba(20,20,20,.15);color:#141414}
+  .label{font-size:11px;letter-spacing:.5em;color:var(--sub)}
+  .title{font-weight:600;font-size:20px}
+  .hero{padding:64px 24px 84px}
+  .hero .cap{font-size:11px;letter-spacing:.5em;color:var(--sub)}
+  .hero .ph{margin-top:28px;aspect-ratio:3/4;overflow:hidden}
+  .hero .ph div{height:110%;background:url(photo.jpg) 50% 42%/cover}
+  .hero .nm{margin-top:38px;font-size:22px;font-weight:600;letter-spacing:.1em}
+  .hero .nm i{font-style:normal;font-weight:300;font-size:13px;color:var(--sub);margin:0 12px;letter-spacing:0}
+  .hero .big{font-size:46px;font-weight:200;letter-spacing:.03em;margin-top:12px}
+  .hero .w{font-size:13px;color:var(--sub);margin-top:12px;line-height:1.8}
+  .mid{padding:0 24px 20px}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .duo i{aspect-ratio:3/4;background:url(photo.jpg) no-repeat;display:block}
+  .mid p{margin-top:26px;font-size:14px;color:var(--sub);line-height:1.9}
+  .gal{padding-left:0;padding-right:0}
+  .g-grid{gap:2px}
+  .grid{font-weight:300}
+  .end{padding:110px 30px 90px;border-top:1px solid var(--line)}
+  .end h3{font-size:40px;letter-spacing:.02em}
+  .end p{font-size:14px;color:var(--sub);line-height:1.9;margin-top:14px}
+ </style>
+</head>
+<body>
+<div id="intro" data-time="2400"><div class="t"><b>04 · 24</b><i></i><small>KIHEON &amp; SOL</small></div></div>
+<div id="progress"></div>
+<button id="bgm-btn" aria-label="배경음악">♪</button>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="cap" data-in>WEDDING INVITATION</div>
+    <div class="ph" data-in style="transition-delay:.15s"><div data-px=".05"></div></div>
+    <div class="nm" data-in style="transition-delay:.3s">한기헌<i>그리고</i>박솔</div>
+    <div class="big" data-in style="transition-delay:.4s">2027.04.24</div>
+    <div class="w" data-in style="transition-delay:.5s">토요일 오후 1시 10분<br>웨스턴팰리스웨딩 7층 웨스턴홀</div>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">INVITATION</div>
+    <div class="title" data-r="up">소중한 분들을 초대합니다</div>
+    <p class="poem" data-r="blur">서로의 하루를 묻고 듣는 일이<br>어느새 가장 큰 기쁨이 되었습니다.<br><br>이제 한 사람의 남편과 아내로<br>같은 길을 걸어가려 합니다.<br>그 첫걸음에 함께해 주세요.</p>
+    <div class="rule" data-r="zoom"></div>
+    <div class="fam stagger">
+      <div>한형열 · 이영이<small>의 장남</small><b>기헌</b></div>
+      <div>박상필 · 최미애<small>의 장녀</small><b>솔</b></div>
+    </div>
+    <button class="pill" data-open="m-contact" data-r="up">연락하기</button>
+  </section>
+
+  <section class="mid">
+    <div class="duo"><i data-r="left" style="background-size:230%;background-position:22% 50%"></i><i data-r="right" style="background-size:230%;background-position:80% 54%"></i></div>
+    <p data-r="up">같은 곳을 바라보며, 같은 속도로 걷겠습니다.</p>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">WEDDING DAY</div>
+    <div class="title" data-r="up">2027. 4. 24 토요일 오후 1시 10분</div>
+    <div class="calbox" data-r="zoom"><div class="grid" id="cal" data-head="S,M,T,W,T,F,S"></div></div>
+    <div class="dd" id="dday" data-labels="DAYS,HOUR,MIN,SEC" data-r="up"></div>
+    <div class="dmsg" data-r="up">기헌 ♥ 솔의 결혼식이 <b><span class="dnum"></span>일</b> 남았습니다</div>
+  </section>
+
+  <section class="gal" id="gallery-sec">
+    <div class="label" data-r="up">GALLERY</div>
+    <div class="title" data-r="up">우리의 순간들</div>
+    <div class="g-grid" id="gallery" data-show="9" data-r="up"></div>
+    <button class="g-more" id="g-more"><span>더보기</span> ↓</button>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">LOCATION</div>
+    <div class="title" data-r="up" style="margin-bottom:10px">웨스턴팰리스웨딩</div>
+    <p class="desc" data-r="up">인천광역시 부평구 부평대로 278번길 16<br>7층 웨스턴홀</p>
+    <div class="map" data-r="zoom"><i class="pin"></i><span style="text-align:center">지도 자리 (네이버 지도 연동 시 표시)</span></div>
+    <div class="nav" data-r="up" style="text-align:center">
+      <a href="https://map.naver.com/p/search/웨스턴팰리스웨딩" target="_blank">네이버지도</a>
+      <a href="https://map.kakao.com/link/search/웨스턴팰리스웨딩" target="_blank">카카오맵</a>
+      <button data-copy="인천광역시 부평구 부평대로 278번길 16" data-msg="주소가 복사되었습니다">주소 복사</button>
+    </div>
+    <div class="way stagger">
+      <div><b>지하철</b>○호선 ○○역 ○번 출구 도보 ○분</div>
+      <div><b>버스</b>○○정류장 하차 (간선 ○○○ / 지선 ○○○)</div>
+      <div><b>자가용 · 주차</b>내비게이션 '웨스턴팰리스웨딩' 검색 · 건물 주차장 ○시간 무료</div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="label" data-r="up">INFORMATION</div>
+    <div class="title" data-r="up">안내사항</div>
+    <div class="info stagger">
+      <div><b>식사 안내</b><p>식사는 예식 후 ○층 연회장에서 뷔페로 준비되어 있습니다.</p></div>
+      <div><b>포토부스</b><p>환한 미소와 축하 한마디를 남겨 주세요.</p></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="label" data-r="up">R.S.V.P.</div>
+    <div class="title" data-r="up" style="margin-bottom:12px">참석 의사 전달</div>
+    <p class="desc" data-r="up">모든 분을 소중히 모실 수 있도록<br>참석 여부를 미리 알려 주세요.</p>
+    <button class="go" data-open="m-rsvp" data-r="up">참석 의사 전달하기</button>
+  </section>
+
+  <section>
+    <div class="label" data-r="up">ACCOUNT</div>
+    <div class="title" data-r="up" style="margin-bottom:12px">마음 전하실 곳</div>
+    <p class="desc" data-r="up" style="margin-bottom:22px">참석이 어려우신 분들을 위해 기재했습니다.<br>너그러운 마음으로 양해 부탁드립니다.</p>
+    <div class="acc" data-r="up"><button class="acc-h">신랑측 계좌번호</button><div class="acc-b">
+      <div class="acc-row"><span><small>신랑 한기헌</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>아버지 한형열</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>어머니 이영이</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div></div></div>
+    <div class="acc" data-r="up"><button class="acc-h">신부측 계좌번호</button><div class="acc-b">
+      <div class="acc-row"><span><small>신부 박솔</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>아버지 박상필</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div>
+      <div class="acc-row"><span><small>어머니 최미애</small>○○은행 000-0000-0000</span><button class="chip" data-copy="000-0000-0000">복사</button></div></div></div>
+  </section>
+
+  <section class="end">
+    <h3 data-r="blur">Thank you</h3>
+    <p data-r="up">저희의 시작을 함께 축복해 주셔서<br>진심으로 감사합니다.</p>
+    <div class="share" data-r="up"><button data-copy="" data-msg="링크가 복사되었습니다">청첩장 링크 복사</button></div>
+  </section>
+</div>
+
+<div class="modal" id="m-contact"><div class="m-box"><button class="m-x">✕</button><h4>연락하기</h4><p class="s">축하 인사를 전해 주세요</p>
+  <div class="c-row"><span><small>신랑</small>한기헌</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신부</small>박솔</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신랑 혼주</small>한형열 · 이영이</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+  <div class="c-row"><span><small>신부 혼주</small>박상필 · 최미애</span><span class="ic"><a href="tel:">☎</a><a href="sms:">✉</a></span></div>
+</div></div>
+<div class="modal" id="m-rsvp"><div class="m-box"><button class="m-x">✕</button><h4>참석 의사 전달</h4><p class="s">2027. 4. 24 (토) 오후 1:10</p>
+  <form class="rsvp">
+    <div class="seg"><label><input type="radio" name="side" checked><span>신랑측</span></label><label><input type="radio" name="side"><span>신부측</span></label></div>
+    <div class="seg"><label><input type="radio" name="go" checked><span>참석</span></label><label><input type="radio" name="go"><span>불참</span></label></div>
+    <input type="text" placeholder="성함"><input type="number" placeholder="동행 인원 (본인 제외)">
+    <button class="go">전달하기</button>
+  </form>
+</div></div>
+<script src="common.js"></script>
+</body>
+</html>
